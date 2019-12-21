@@ -1,5 +1,5 @@
-# https://docs.powerdns.com/authoritative/backends/generic-postgresql.html
-# https://github.com/PowerDNS/pdns/blob/rel/auth-4.1.x/modules/gpgsqlbackend/schema.pgsql.sql
+-- https://docs.powerdns.com/authoritative/backends/generic-postgresql.html
+-- https://github.com/PowerDNS/pdns/blob/rel/auth-4.1.x/modules/gpgsqlbackend/schema.pgsql.sql
 
 CREATE TABLE domains (
   id                    SERIAL PRIMARY KEY,
@@ -23,7 +23,6 @@ CREATE TABLE records (
   content               VARCHAR(65535) DEFAULT NULL,
   ttl                   INT DEFAULT NULL,
   prio                  INT DEFAULT NULL,
-  change_date           INT DEFAULT NULL,
   disabled              BOOL DEFAULT 'f',
   ordername             VARCHAR(255),
   auth                  BOOL DEFAULT 't',
